@@ -12,7 +12,7 @@ Gliomas são os tumores cerebrais primários mais comuns e apresentam dois subti
 - **LGG** (*Low-Grade Glioma*) — crescimento lento, melhor prognóstico
 - **GBM** (*Glioblastoma Multiforme*) — altamente agressivo, prognóstico reservado
 
-Este trabalho aplica e compara três algoritmos de classificação supervisionada para **diferenciar automaticamente LGG de GBM** com base em marcadores moleculares e dados clínicos. O pipeline implementa boas práticas de machine learning, incluindo pré-processamento robusto, busca de hiperparâmetros via GridSearchCV e avaliação com múltiplas métricas.
+Este trabalho aplica e compara três algoritmos de classificação supervisionada para **diferenciar automaticamente LGG de GBM** com base em marcadores moleculares e dados clínicos. O pipeline implementa boas práticas de machine learning, incluindo pré-processamento, busca de hiperparâmetros via GridSearchCV e avaliação com múltiplas métricas.
 
 ---
 
@@ -67,7 +67,6 @@ O notebook está organizado em **7 etapas sequenciais**:
 | MLP | 50 | 14 | **36** | 40 |
 | BernoulliNB | 34 | 24 | **10** | 25 |
 
-> 💡 **KNN** obteve o melhor equilíbrio geral (menor total de erros, maior F1 e Kappa). **BernoulliNB** destacou-se no AUC-ROC e no menor número de Falsos Negativos, o que é crítico no contexto clínico para não deixar casos de GBM passarem despercebidos.
 
 ---
 
@@ -107,7 +106,6 @@ Todas as bibliotecas são instaladas automaticamente pelo notebook. Abaixo a lis
 | `scikit-learn` | Modelos, pipelines, métricas e GridSearchCV |
 | `matplotlib` / `seaborn` | Visualizações |
 
-> As demais dependências (`scikit-learn`, `pandas`, `matplotlib`, `seaborn`) já estão disponíveis no ambiente padrão do Google Colab.
 
 ---
 
